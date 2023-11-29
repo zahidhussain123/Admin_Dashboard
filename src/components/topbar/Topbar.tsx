@@ -1,4 +1,3 @@
-import React from 'react'
 import "./topbar.scss"
 import { topDealUsers } from '../../data'
 

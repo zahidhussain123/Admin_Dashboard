@@ -1,29 +1,29 @@
-import React from "react";
 import "./chartBox.scss";
 import { Link } from "react-router-dom";
 import { ResponsiveContainer, LineChart, Line, Tooltip } from "recharts";
 
-type Props =  {
-    color: string;
-    icon: string;
-    title: string;
-    dataKey: string;
-    number: number | string;
-    percentage: number;
-    chartData : object[]
-}
+type Props = {
+  color: string;
+  icon: string;
+  title: string;
+  dataKey: string;
+  number: number | string;
+  percentage: number;
+  chartData: object[];
+};
 
-const ChartBox = (props:Props) => {
-
+const ChartBox = (props: Props) => {
   return (
     <div className="chartBox">
       <div className="boxInfo">
         <div className="title">
           <img src={props.icon} alt="user" />
-                  <span>{ props.title}</span>
+          <span>{props.title}</span>
         </div>
-              <h1>{ props.number}</h1>
-        <Link to="/" style={{color : props.color}}>View all</Link>
+        <h1>{props.number}</h1>
+        <Link to="/" style={{ color: props.color }}>
+          View all
+        </Link>
       </div>
       <div className="chartInfo">
         <div className="chart">
@@ -45,7 +45,12 @@ const ChartBox = (props:Props) => {
           </ResponsiveContainer>
         </div>
         <div className="texts">
-          <span className="percentage" style={{color : props.percentage < 0 ? "tomato" : "limegreen"}}>45%</span>
+          <span
+            className="percentage"
+            style={{ color: props.percentage < 0 ? "tomato" : "limegreen" }}
+          >
+            45%
+          </span>
           <span className="duration">this month</span>
         </div>
       </div>

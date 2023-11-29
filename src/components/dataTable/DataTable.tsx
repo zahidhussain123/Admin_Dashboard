@@ -10,7 +10,9 @@ type Props = {
 };
 
 const DataTable = (props: Props) => {
-  const handleDelete = (id: number) => {};
+  const handleDelete = (id: number) => {
+    console.log(id)
+  };
   const actionColumn: GridColDef = {
     field: "action",
     headerName: "Action",
